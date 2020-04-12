@@ -1,15 +1,18 @@
 
 import React from 'react';
-import {createStore} from 'redux';
+// import {createStore} from 'redux';
+import store from './store';
 
 import './App.css';
 
 import List from './componets/list';
 import Counter from './componets/counter';
+import Book from './componets/books'
 
-import Reducer from './reducers';
+// import Reducer from './reducers';
+// const store  = createStore(Reducer);
 
-const store  = createStore(Reducer);
+// console.log(store.getState());
 
 function App() {
   return (
@@ -22,11 +25,12 @@ function App() {
      <List 
         store = {store}     
       />
+      <Book store= {store}/>
     </div>
   );
 }
 
-export {App, store};
+export default App;
 
 
 
