@@ -1,6 +1,7 @@
 //单拿出store 可以通用store
 
 import { createStore, applyMiddleware } from 'redux';
+import  thunk from 'redux-thunk';
 import Reducer from './reducers';
 
 const store = createStore(Reducer, applyMiddleware(leo));
